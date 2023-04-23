@@ -7,8 +7,14 @@
   <title>AI Tic Tac Toe</title>
   <style>
     h1 {
-        text-align: center;
-        margin-bottom: auto;
+      text-align: center;
+      margin-bottom: auto;
+    }
+
+    h2 {
+      text-align: center;
+      margin-top: auto;
+      margin-bottom: 0px;
     }
 
     h3 {
@@ -62,7 +68,7 @@
     <div id="playerO">AI (O): <span id="scoreO">0</span></div>
     </div>
   <h1> Unbeatable AI: Tic Tac Toe</h1>
-  <h3> Powered by Alpha Beta Search Algorithm</h3>
+  <h3> Powered by Alpha-Beta Search Algorithm</h3>
   <div class="grid">
     <div class="cell" onclick="makeMove(0, 0)"></div>
     <div class="cell" onclick="makeMove(0, 1)"></div>
@@ -75,6 +81,19 @@
     <div class="cell" onclick="makeMove(2, 2)"></div>
   </div>
   <button id="newGame">New Game</button>
+  <h2>So, how does it work? </h2>
+  <p>
+    Alpha-Beta search is an algorithm used to help computers make decisions in two-player games, like chess or tic-tac-toe. Imagine you're playing a game, and for each turn, you need to choose the best move. You'd look at all the possible moves and their outcomes to decide which one is best.
+  </p>
+  <p>
+    The algorithm does the same thing by exploring a decision tree, which is like a map of all possible moves and their consequences. However, instead of examining every single move, Alpha-Beta search saves time by ignoring paths that clearly won't lead to a better outcome. This way, the computer can find the best move more quickly and efficiently.
+  </p>
+  <p>
+   Basically, Alpha-Beta search is so efficient at finding the best moves, it's like the computer version of an online-dating expert who can quickly swipe left on bad matches and choose a perfect date without breaking too much sweat!
+  </p>
+  <p>
+    more technical info coming later...
+  </p>
   <script>
     let board = [
       ["", "", ""],
