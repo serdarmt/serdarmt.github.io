@@ -1,0 +1,146 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Tic Tac Toe</title>
+  <style>
+    h1 {
+      text-align: center;
+      margin-bottom: auto;
+    }
+
+    h2 {
+      text-align: center;
+      margin-top: auto;
+      margin-bottom: 0px;
+      font-size: 1.5rem;
+    }
+
+    h3 {
+        text-align: center;
+        margin-bottom: auto;
+    }
+
+    body {
+        display: block;
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+    }
+
+    .grid {
+      display: grid;
+      justify-content: center;
+      margin: 20px auto;
+      grid-template-columns: repeat(3, 100px);
+      grid-template-rows: repeat(3, 100px);
+      gap: 5px;
+    }
+
+    .cell {
+      width: 100px;
+      height: 100px;
+      border: 1px solid black;
+      text-align: center;
+      line-height: 100px;
+      font-size: 24px;
+    }
+
+    .explanation {
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #f5f5f5;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      max-width: 800px;
+      margin-top: 40px;
+      margin-bottom: 40px;
+    }
+
+    .explanation p {
+      margin-bottom: 1rem;
+    }
+
+    .scoreboard {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #f5f5f5;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      max-width: 400px;
+    }
+
+    .scoreboard div {
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin: 0 20px;
+    }
+
+    #newGame {
+      display: block;
+      margin: 20px auto;
+      padding: 10px 20px;
+      background-color: #76d179;
+      color:white;
+      border: none;
+      cursor: pointer;
+    }
+
+    #gameMessage {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #b63018;
+      background-color: rgba(186, 180, 180, 0.8);
+      padding: 20px;
+      border: 1px solid rgb(0, 0, 0);
+      display: none;
+    }
+
+  </style>
+</head>
+<body>
+    <div class="scoreboard">
+    <div id="playerX">Human (X): <span id="scoreX">0</span></div>
+    <div id="playerO">AI (O): <span id="scoreO">0</span></div>
+    </div>
+  <h1> Unbeatable AI: Tic Tac Toe</h1>
+  <h3> Powered by Alpha-Beta Search Algorithm</h3>
+  <div id="gameMessage"></div>
+  <div class="grid">
+    <div class="cell" onclick="makeMove(0, 0)"></div>
+    <div class="cell" onclick="makeMove(0, 1)"></div>
+    <div class="cell" onclick="makeMove(0, 2)"></div>
+    <div class="cell" onclick="makeMove(1, 0)"></div>
+    <div class="cell" onclick="makeMove(1, 1)"></div>
+    <div class="cell" onclick="makeMove(1, 2)"></div>
+    <div class="cell" onclick="makeMove(2, 0)"></div>
+    <div class="cell" onclick="makeMove(2, 1)"></div>
+    <div class="cell" onclick="makeMove(2, 2)"></div>
+  </div>
+  <button id="newGame">New Game</button>
+  <div class="explanation">
+    <h2>So, how does it work? </h2>
+    <p>
+      Alpha-Beta search is an algorithm used to help computers make decisions in two-player games, like chess or tic-tac-toe. Imagine you're playing a game, and for each turn, you need to choose the best move. You'd look at all the possible moves and their outcomes to decide which one is best.
+    </p>
+    <p>
+      The algorithm does the same thing by exploring a decision tree, which is like a map of all possible moves and their consequences. However, instead of examining every single move, Alpha-Beta search saves time by ignoring paths that clearly won't lead to a better outcome. This way, the computer can find the best move more quickly and efficiently.
+    </p>
+    <p>
+     Basically, Alpha-Beta search is so efficient at finding the best moves, it's like the computer version of an online-dating expert who can quickly swipe left on bad matches and choose a perfect date without breaking too much sweat!
+    </p>
+    <p>
+      more technical info coming later...
+    </p>
+  </div>
+  <script src="tic_tac_toe.js"></script>
+</body>
+</html>
