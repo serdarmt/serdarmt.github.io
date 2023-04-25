@@ -97,10 +97,11 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      color: #b63018;
-      background-color: rgba(186, 180, 180, 0.8);
+      font-size: large;
+      color: #bd250a;
+      background-color: rgba(186, 180, 180, 0.9);
       padding: 20px;
-      border: 1px solid rgb(0, 0, 0);
+      border: 1px solid rgb(255, 255, 255);
       display: none;
     }
 
@@ -111,8 +112,8 @@
     <div id="playerX">Human (X): <span id="scoreX">0</span></div>
     <div id="playerO">AI (O): <span id="scoreO">0</span></div>
     </div>
-  <h1> Unbeatable AI: Tic Tac Toe</h1>
-  <h3> Powered by Alpha-Beta Search Algorithm</h3>
+  <h1> Unbeatable AI: Tic-Tac-Toe</h1>
+  <h3> powered by Alpha-Beta Pruning Algorithm</h3>
   <div id="gameMessage"></div>
   <div class="grid">
     <div class="cell" onclick="makeMove(0, 0)"></div>
@@ -129,16 +130,16 @@
   <div class="explanation">
     <h2>So, how does it work? </h2>
     <p>
-      Alpha-Beta search is an algorithm used to help computers make decisions in two-player games, like chess or tic-tac-toe. Imagine you're playing a game, and for each turn, you need to choose the best move. You'd look at all the possible moves and their outcomes to decide which one is best.
+      Alpha-Beta pruning is a search algorithm used to help computers make decisions in two-player games, like chess or tic-tac-toe. Imagine you're playing a game, and for each turn, you need to choose the best move. You'd look at all the possible moves and their outcomes to decide which one is best.
     </p>
     <p>
-      The algorithm does the same thing by exploring a decision tree, which is like a map of all possible moves and their consequences. However, instead of examining every single move, Alpha-Beta search saves time by ignoring paths that clearly won't lead to a better outcome. This way, the computer can find the best move more quickly and efficiently.
+      The algorithm does the same thing by exploring a decision tree, which is like a map of all possible moves and their consequences. However, instead of examining every single move, Alpha-Beta search saves time by ignoring (or "pruning") paths that clearly won't lead to a better outcome. This way, the computer can find the best move more quickly and efficiently.
     </p>
     <p>
      Basically, Alpha-Beta search is so efficient at finding the best moves, it's like the computer version of an online-dating expert who can quickly swipe left on bad matches and choose a perfect date without breaking too much sweat!
     </p>
     <p>
-      more technical info coming later...
+      More technical info, diagrams, and graphs are coming later...
     </p>
   </div>
   <script src="tic_tac_toe.js"></script>
