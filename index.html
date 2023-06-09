@@ -1,47 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Merriweather:300|Raleway:400,700" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
   <title>Serdar's homepage</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-    }
+  <meta name="description" content="Learn about Serdar, his projects and his journey.">
+  <meta property="og:title" content="Serdar's homepage" />
+  <meta property="og:description" content="Learn about Serdar, his projects and his journey." />
+  <meta property="og:url" content="serdarmt.github.io" />
+  
+  <script src="/assets/js/darkmode.js"></script>
 
-    h1 {
-      background-color: #f0f0f0;
-      margin: 0;
-      padding: 20px;
-    }
-
-    section {
-      padding: 20px;
-    }
-  </style>
 </head>
 <body>
-  <h1>Serdar's homepage</h1>
+  <main class="container">
+    <section class="about">
+      <div class="about-title">
+        <a href="/">
 
-  <section id="about">
-    <h2>Hey there!</h2>
-    <p>
-        My name is Serdar and I am a software engineer based out of NYC. I currently work on projects related to AI and Linux.
-    </p>
-    <p>
-        I am also currently attending Columbia University where I am working towards my bachelor’s in computer science on the software systems track.
-    </p>
-  </section>
+          <img src="/assets/portfolio.png" alt="Serdar Mamadzhanov" />
+        
+        </a>
+        <h2 id="title">
+          <a href="/">Serdar Mamadzhanov</a>
+        </h2>
+      </div><p class="tagline">SWE Intern @ Pelican</p></div>
 
-  <section id="projects">
-    <h2>Projects</h2>
-    <ul>
-      <li><a href="/projects/ai-tic-tac-toe/tic_tac_toe.html">Tic-Tac-Toe with Alpha-Beta Pruning search </a></li>
-      <li><a href="index.html">Project 2: Coming</a></li>
-      <li><a href="index.html">Project 3: Coming</a></li>
-    </ul>
-  </section>
+      <ul class="social about-footer">
+        <a href="https://github.com/serdarmt" target="_blank">
+          <li>
+            <i class="icon-github-circled"></i>
+          </li>
+        </a>
+        <a href="https://www.linkedin.com/in/serdarmamet/" target="_blank">
+          <li>
+            <i class="icon-linkedin-squared"></i>
+          </li>
+        </a>
+      </ul>
+      
+      <!-- additional navigation -->
+      <nav class="navigation about-footer">
+        <ul>
+          <li><a href="/assets/Serdar_CV.pdf">CV</a></li>
+        </ul>
+      </nav>
+      <!-- <p class="about-footer">&copy; 2023</p> -->
+      
+      <div class="about-footer">
+        <p>Dark Mode
+          <i class="icon-moon"></i>
+          <label class="switch">
+            <input type="checkbox" class="dark-mode-toggle">
+            <span class="slider round" onclick="toggleDarkMode()"></span>
+          </label>
+        </p>
+      </div>
+    </section>
+
+    <section class="content">
+      <div class="post-container">
+        <h2 class="post-title">Hey there!</h2>
+        <p>My name is Serdar and I am a software engineer based out of NYC. I currently work on projects related to AI and Linux.</p>
+        <p>I am also currently attending Columbia University where I am working towards my bachelor’s in computer science on the software systems track.</p>
+
+        <h2 id="projects">Projects</h2>
+        <ul>
+          <li><a href="/projects/ai-tic-tac-toe/tic_tac_toe.html">Tic-Tac-Toe with Alpha-Beta Pruning search</a></li>
+          <li><a href="#">Project 2: Coming</a></li>
+          <li><a href="#">Project 3: Coming</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <footer class="about-footer">
+      <ul class="social about-footer">
+        <a href="your-github-link-here" target="_blank">
+          <li>
+            <i class="icon-github-circled"></i>
+          </li>
+        </a>
+        <a href="your-linkedin-link-here" target="_blank">
+          <li>
+            <i class="icon-linkedin-squared"></i>
+          </li>
+        </a>
+      </ul>
+      
+      <nav class="navigation about-footer">
+        <ul>
+          <li><a href="/assets/Serdar_CV.pdf">CV</a></li>
+        </ul>
+      </nav>
+      
+      <p class="about-footer">&copy; 2023</p>
+      
+      <div class="about-footer">
+        <p>Dark Mode
+          <i class="icon-moon"></i>
+          <label class="switch">
+            <input type="checkbox" class="dark-mode-toggle">
+            <span class="slider round" onclick="toggleDarkMode()"></span>
+          </label>
+        </p>
+      </div>
+    </footer>
+  </main>
+
+  <script src="/assets/js/darkmode.js"></script>
 </body>
+
 </html>
