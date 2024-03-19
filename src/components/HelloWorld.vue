@@ -1,5 +1,6 @@
 <template>
   <div class="hello">
+    <title>Serdar's Homepage</title>
     <h1>THIS IS MY NEW PERSONAL SITE</h1>
     <h1>{{ msg }}</h1>
     <p>
