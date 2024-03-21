@@ -1,16 +1,22 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <title>Serdar's Homepage</title>
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app">
+    <div class="container">
+      <ProfileSide class="profile-side"/>
+      <MainContent class="main-content"/>
+    </div>
+  </div>
+
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import ProfileSide from './components/views/ProfileSide.vue'
+import MainContent from './components/views/MainContent.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    ProfileSide,
+    MainContent,
   }
 }
 </script>
@@ -18,10 +24,43 @@ export default {
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+}
+
+.container {
+  display: flex;
+  min-height: 100vh;
+}
+
+.profile-side {
+  width: 35%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.main-content {
+  flex-grow: 1;
+  margin-left: 35%;
+  overflow-y: auto;
+  height: 100vh;
+}
+
+.dark-mode {
+  background-color: #242424;
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+  .profile-side {
+    position: relative;
+    width: auto;
+  }
+  .main-content {
+    margin-left: 0%;
+  }
 }
 </style>
