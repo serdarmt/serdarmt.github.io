@@ -1,84 +1,65 @@
 <template>
-    <div class="profile-side">
-        <img src="@/assets/portfolio.jpg" alt="Profile Picture" class="profile-pic">
-        <h2>Serdar Mamadzhanov</h2>
-        <h2 class="position">SWE @ hoolii</h2>
-        <div class="social-links">
-            <a href="" target="_blank"><i class="ci ci-linkedin ci-2xl"></i></a>
-            <a href="" target="_blank"><i class="ci ci-github ci-2xl"></i></a>
-        </div>
-        <a href="" target="_blank" class="cv-link">CV</a>
-        <p>Dark Mode</p>
-        <ToggleSwitch :value="isDarkMode" @update:value="toggleDarkMode" />
-    </div>
+    <v-container class="profile-side d-flex flex-column align-center my-5">
+        <!-- Profile Avatar/Image -->
+        <v-avatar :image="require('@/assets/profilepic.jpg')" size="150" class="my-3">
+        </v-avatar>
+
+        <!-- Full Name -->
+        <div class="text-h5 my-1">Serdar Mamadzhanov</div>
+
+        <!-- Position -->
+        <div class="text-h6 text--grey font-weight-light mb-5">SWE @ Hoolii</div>
+        
+        <!-- Social Links -->
+        <v-row justify="center" class="my-3 ga-3">
+            <v-btn icon :href="linkedinLink" target="_blank">
+                <v-icon size="24">mdi-linkedin</v-icon>
+            </v-btn>
+            <v-btn icon :href="githubLink" target="_blank">
+                <v-icon size="24">mdi-github</v-icon>
+            </v-btn>
+        </v-row>
+
+        <!-- CV Link -->
+        <v-btn text :href="cvLink" target="_blank" class="my-3 mb-6">
+        CV
+        </v-btn>
+
+        <!-- Dark Mode Toggle -->
+        <v-switch 
+            label="Dark Mode" 
+            @change="toggleTheme"
+            color="indigo-darken-3"
+        ></v-switch>
+        <!-- <v-btn @click="toggleTheme">toggle theme</v-btn> -->
+    </v-container>
 </template>
 
 <script>
-import ToggleSwitch from '../ui/buttons/ToggleSwitch.vue'
+import { useTheme } from 'vuetify';
 
 export default {
-    name: 'ProfileSide',
-    components: {
-        ToggleSwitch // Registering the ToggleSwitch component for use
-    },
-    data() {
-        return {
-            isDarkMode: false
-        };
-    },
-    methods: {
-        toggleDarkMode(newValue) {
-            this.isDarkMode = newValue;
-            document.body.classList.toggle('dark-mode', this.isDarkMode);
-        }
+  name: 'ProfileSide',
+  setup() {
+    const theme = useTheme();
+    
+    function toggleTheme() {
+        theme.global.name.value = theme.global.current.value.dark ? 'light': 'dark';
     }
-}
+
+    return {
+      // Your existing data properties
+      linkedinLink: "https://www.linkedin.com/in/serdarmt/",
+      githubLink: "https://github.com/serdarmt",
+      cvLink: '/serdar_resume_022824.pdf',
+      toggleTheme,
+    };
+  },
+};
 </script>
 
 <style scoped>
-h2 {
-    font-weight: normal;
-    margin: 5px;
-}
-
-h2.position {
-    color: #a2a2a2;
-}
-
 .profile-side {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    justify-content: center;
-}
-
-.profile-pic {
-    border-radius: 50%;
-    width: 150px;
-    margin-bottom: 10px;
-}
-
-.social-links {
-    margin: 10px 0;
-    color: inherit;
-    padding: 10px;
-    display: flex;
-    flex-direction: row;
-    column-gap: 15px;
-}
-
-.cv-link {
-    display: block;
-    margin: 15px;
-    text-decoration: none;
-    font-size: large;
-}
-
-@media (max-width: 768px) {
-    .profile-side {
-        justify-content: flex-start;
-        margin-top: 5%;
-    }
+    max-width: 300px;
 }
 </style>

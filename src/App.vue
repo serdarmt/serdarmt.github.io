@@ -1,14 +1,24 @@
 <template>
-  <div id="app">
-    <div class="container">
-      <ProfileSide class="profile-side"/>
-      <MainContent class="main-content"/>
-    </div>
-  </div>
-
+  <v-app>
+    <v-main>
+      <v-container fluid class="fill-height pa-0">
+        <v-row no-gutters>
+          <v-col cols="12" md="4" class="pa-2">
+            <ProfileSide/>
+          </v-col>
+          <v-col cols="12" md="8" class="pa-1">
+            <v-container class="overflow-y-auto" style="max-height: 100vh;">
+              <MainContent/>
+            </v-container>
+          </v-col>
+        </v-row>
+      </v-container>
+    </v-main>
+  </v-app>
 </template>
 
 <script>
+// import HelloWorld from './components/HelloWorld.vue'
 import ProfileSide from './components/views/ProfileSide.vue'
 import MainContent from './components/views/MainContent.vue'
 
@@ -17,50 +27,31 @@ export default {
   components: {
     ProfileSide,
     MainContent,
-  }
+  },
+
+  data: () => ({
+    //
+  }),
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-}
+/* Global styles can go here. Scoped styles should be used within individual components. */
 
-.container {
-  display: flex;
-  min-height: 100vh;
-}
+/* body {
+  font-family: 'Merriweather', serif;
+  font-style: normal;
+  font-size: medium;
+  font-size: 14pt;
+  color:lightslategrey;
+} */
 
-.profile-side {
-  width: 35%;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  left: 0;
-}
+/* Set Raleway for headings */
+/* h1, h2, h3, h4, h5, h6 {
+  font-family: 'Raleway', sans-serif;
+} */
 
-.main-content {
-  flex-grow: 1;
-  margin-left: 35%;
-  overflow-y: auto;
-  height: 100vh;
-}
-
-.dark-mode {
-  background-color: #242424;
-  color: #fff;
-}
-
-@media (max-width: 768px) {
-  .container {
-    flex-direction: column;
-  }
-  .profile-side {
-    position: relative;
-    width: auto;
-  }
-  .main-content {
-    margin-left: 0%;
-  }
+::-webkit-scrollbar {
+  display: none;
 }
 </style>
