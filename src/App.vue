@@ -7,7 +7,7 @@
             <ProfileSide/>
           </v-col>
           <v-col cols="12" md="8" class="pa-1">
-            <v-container class="overflow-y-auto" style="max-height: 100vh;">
+            <v-container class="main-content" style="max-height: 100vh;">
               <MainContent/>
             </v-container>
           </v-col>
@@ -50,6 +50,17 @@ export default {
 /* h1, h2, h3, h4, h5, h6 {
   font-family: 'Raleway', sans-serif;
 } */
+
+.main-content {
+  overflow-y: auto;
+}
+
+
+@media (max-width: 768px){
+  .main-content {
+    overflow-y: visible;
+  }
+}
 
 ::-webkit-scrollbar {
   display: none;

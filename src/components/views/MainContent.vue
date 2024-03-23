@@ -47,11 +47,11 @@
           
                     <!-- Entry: Software Engineer at Hoolii -->
                     <div class="experience-entry my-2">
-                        <div class="role-company d-flex-inline align-center">
+                        <div class="role-company">
                         Software Engineer @ Hoolii
-                        <a :href="`https://hooliitracker.com`" target="_blank" class="company-logo-link ml-2">
-                            <img :src="require('@/assets/hoolii-logo.png')" alt="Company Logo" class="company-logo">
-                        </a>
+                            <a :href="`https://hooliitracker.com`" target="_blank" class="company-logo-link ml-2">
+                                <img :src="require('@/assets/hoolii-logo.png')" alt="Company Logo" class="company-logo">
+                            </a>
                         </div>
                         <div class="date-location">Clearwater FL, 08/2023 – Present</div>
                         <ul>
@@ -62,11 +62,11 @@
 
                     <!-- Entry: Competitive Programming Intern at ICPC -->
                     <div class="experience-entry my-7">
-                        <div class="role-company d-flex align-center">
-                        Competitive Programming Intern @ ICPC
-                        <a :href="`https://icpc.global`" target="_blank" class="company-logo-link ml-2">
-                            <img :src="require('@/assets/icpc-logo.png')" alt="Company Logo" class="company-logo">
-                        </a>
+                        <div class="role-company">
+                            Competitive Programming Intern @ ICPC
+                            <a :href="`https://icpc.global`" target="_blank" class="company-logo-link ml-2">
+                                <img :src="require('@/assets/icpc-logo.png')" alt="Company Logo" class="company-logo">
+                            </a>
                         </div>
                         <div class="date-location">New York NY, 01/2024 – Present</div>
                         <ul>
@@ -77,7 +77,7 @@
 
                     <!-- Entry: Full Stack Engineer Intern at Pelican Invests -->
                     <div class="experience-entry my-7">
-                        <div class="role-company d-flex align-center">
+                        <div class="role-company">
                         Full Stack Engineer Intern @ Pelican Invests
                             <a :href="`https://pelicaninvests.com`" target="_blank" class="company-logo-link ml-2">
                                 <img :src="require('@/assets/pelican-logo.png')" alt="Company Logo" class="company-logo">
@@ -92,7 +92,7 @@
 
                     <!-- Entry: Software Engineer Intern at Pelican Invests -->
                     <div class="experience-entry my-7">
-                        <div class="role-company d-flex align-center">
+                        <div class="role-company">
                         Software Engineer Intern @ Pelican Invests
                             <a :href="`https://pelicaninvests.com`" target="_blank" class="company-logo-link ml-2">
                                 <img :src="require('@/assets/pelican-logo.png')" alt="Company Logo" class="company-logo">
@@ -132,19 +132,15 @@ export default {
 
 <style scoped>
 
-/* .education-entry span {
-  font-size: 0.95em;
-  color: #666;
-}
-*/
-
-
 .role-company {
   font-weight: 500; /* Adjust based on preference */
   font-size: 1.1em; /* Slightly larger font size for the role and company */
   margin-bottom: 4px; /* Space between role-company and date-location */
   text-align: left;
-  display: inline-flex;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  align-items: center;
 }
 
 .date-location {
@@ -175,4 +171,15 @@ export default {
     width: auto;
     border-radius: 10%;
 }
+
+
+@media (max-width: 768px) {
+    .company-logo {
+    height: 24px;
+    width: auto;
+    border-radius: 10%;
+}
+}
+
+
 </style>
