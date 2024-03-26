@@ -1,14 +1,14 @@
 <template>
-    <v-container class="profile-side d-flex flex-column align-center my-5">
+    <v-container class="profile-side d-flex flex-column align-center justify-center my-5">
         <!-- Profile Avatar/Image -->
         <v-avatar :image="require('@/assets/profilepic.jpg')" size="150" class="my-3">
         </v-avatar>
 
         <!-- Full Name -->
-        <div class="text-h5 my-1">Serdar Mamadzhanov</div>
+        <div class="text-h5 font-weight-regulars my-2 mb-2">Serdar Mamadzhanov</div>
 
         <!-- Position -->
-        <div class="text-h6 text--grey font-weight-light mb-5">SWE @ Hoolii</div>
+        <div class="text-h6 text-grey font-weight-regular mb-5">SWE @ Hoolii</div>
         
         <!-- Social Links -->
         <v-row justify="center" class="my-3 ga-3">
@@ -21,15 +21,18 @@
         </v-row>
 
         <!-- CV Link -->
-        <v-btn text :href="cvLink" target="_blank" class="my-3 mb-6">
+        <v-btn text :href="cvLink" target="_blank" class="my-5 mb-14">
         CV
         </v-btn>
+
+        <p> <v-icon size="18px">mdi-copyright</v-icon> 2024</p>
 
         <!-- Dark Mode Toggle -->
         <v-switch 
             label="Dark Mode" 
             @change="toggleTheme"
             color="indigo-darken-3"
+            class="my-1"
         ></v-switch>
         <!-- <v-btn @click="toggleTheme">toggle theme</v-btn> -->
     </v-container>
@@ -60,6 +63,7 @@ export default {
 
 <style scoped>
 .profile-side {
-    max-width: 300px;
+    /* max-width: 320px; */
+    min-width: 300px;
 }
 </style>

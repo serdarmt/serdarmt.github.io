@@ -3,10 +3,10 @@
     <v-main>
       <v-container fluid class="fill-height pa-0">
         <v-row no-gutters>
-          <v-col cols="12" md="4" class="pa-2">
+          <v-col cols="12" md="3" class="pa-5">
             <ProfileSide/>
           </v-col>
-          <v-col cols="12" md="8" class="pa-1">
+          <v-col cols="12" md="9" class="pa-2 pl-8">
             <v-container class="main-content" style="max-height: 100vh;">
               <MainContent/>
             </v-container>
@@ -59,6 +59,7 @@ export default {
 @media (max-width: 768px){
   .main-content {
     overflow-y: visible;
+    padding-left: 0;
   }
 }
 

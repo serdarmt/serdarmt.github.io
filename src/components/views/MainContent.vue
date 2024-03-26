@@ -7,7 +7,7 @@
                     <v-subheader class="text-h5 font-weight-medium">Serdar's homepage</v-subheader>
                     <div class="d-flex align-center my-1">
                         <v-icon class="mr-2">mdi-calendar</v-icon>
-                        <span>Mar 23, 2024</span>
+                        <span>Mar 25, 2024</span>
                     </div>
                 </section>
                 
@@ -17,7 +17,7 @@
                     My name is Serdar and I am a software engineer based out of NYC. I currently work at Hoolii as a Full Stack Software Engineer.
                 </p>
                 <p class="mt-3">
-                    I previously attended Columbia University where I completed by bachelor's in 2023 and currently working towards my master's at UT Austin, both in computer science.
+                    I previously attended Columbia University where I completed my bachelor's in 2023 and currently working towards my master's at UT Austin, both in computer science.
                 </p>
                 <p class="mt-3">
                         You can reach me at <a class="text-decoration-none" href="mailto:sm5038@columbia.edu" >sm5038@columbia.edu</a>
@@ -34,7 +34,7 @@
                             <span>BA in Computer Science</span>
                         </div>
                         <div class="education-entry my-2">
-                            <span>University of Texas at Austin, NS '25 – </span>
+                            <span>University of Texas at Austin, NS '26 – </span>
                             <span>MS in Computer Science</span>
                         </div>
                     </div>
@@ -42,7 +42,7 @@
 
                 
                 <!-- Section: Experience -->
-                <section class="my-7 d-flex-inline">
+                <section class="my-9 d-flex-inline">
                     <v-subheader class="text-h5 font-weight-medium py-2"> Recent Experience</v-subheader>
           
                     <!-- Entry: Software Engineer at Hoolii -->
@@ -55,8 +55,8 @@
                         </div>
                         <div class="date-location">Clearwater FL, 08/2023 – Present</div>
                         <ul>
-                        <li>Develop CRM software using Vue.js, Node.js, Firebase backend, OAuth, Google Cloud Functions, and NoSQL database.</li>
-                        <li>Integrate RESTful APIs, maintain and enhance product functionalities.</li>
+                            <li>Develop CRM software using Vue.js, Node.js, Firebase backend, OAuth, Google Cloud Functions, and NoSQL database.</li>
+                            <li>Integrate RESTful APIs, maintain and enhance product functionalities.</li>
                         </ul>
                     </div>
 
@@ -70,8 +70,8 @@
                         </div>
                         <div class="date-location">New York NY, 01/2024 – Present</div>
                         <ul>
-                        <li>Develop advanced algorithms and collaborate in Agile team settings.</li>
-                        <li>Enhance problem-solving efficiency and coding proficiency in Python and C++.</li>
+                            <li>Develop advanced algorithms and collaborate in Agile team settings.</li>
+                            <li>Enhance problem-solving efficiency and coding proficiency in Python and C++.</li>
                         </ul>
                     </div>
 
@@ -107,13 +107,10 @@
                 
                 <!-- Section: Projects -->
                 <section class="my-4">
-                    <v-subheader class="text-h5 py-2 font-weight-medium">Projects</v-subheader>
-                    <p>
-                        Columbia University, GS'23 - Bachelor's in Computer Science
-                    </p>
-                    <p>
-                        University of Texas at Austin, NS'25 - Master's in Computer Science
-                    </p>
+                    <v-subheader class="text-h5 py-2 font-weight-medium">Portfolio</v-subheader>
+                    <div>
+                        <ProjectsSection />
+                    </div>
 
                 </section>
             </v-col>
@@ -122,8 +119,14 @@
 </template>
 
 <script>
+
+import ProjectsSection from '../ui/ProjectsSection'
+
 export default {
     name: 'MainContent',
+    components: {
+        ProjectsSection,
+    },
     data: () => ({
         lastModifiedDate: document.lastModifiedDate,
     }),
@@ -178,8 +181,7 @@ export default {
     height: 24px;
     width: auto;
     border-radius: 10%;
+    }
 }
-}
-
 
 </style>
