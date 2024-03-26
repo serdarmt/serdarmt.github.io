@@ -1,11 +1,11 @@
 <template>
-    <v-container class="profile-side d-flex flex-column align-center justify-center my-5">
+    <v-container class="profile-side d-flex flex-column align-center my-5">
         <!-- Profile Avatar/Image -->
         <v-avatar :image="require('@/assets/profilepic.jpg')" size="150" class="my-3">
         </v-avatar>
 
         <!-- Full Name -->
-        <div class="text-h5 font-weight-regulars my-2 mb-2">Serdar Mamadzhanov</div>
+        <div class="text-h5 font-weight-regular my-2 mb-2 text-no-wrap">Serdar Mamadzhanov</div>
 
         <!-- Position -->
         <div class="text-h6 text-grey font-weight-regular mb-5">SWE @ Hoolii</div>

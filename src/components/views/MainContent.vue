@@ -1,5 +1,5 @@
 <template>
-    <v-container>
+    <v-container class="main-content">
         <v-row>
             <v-col>
                 <!-- Section: Introduction -->

@@ -6,7 +6,7 @@
           <v-col cols="12" md="3" class="pa-5">
             <ProfileSide/>
           </v-col>
-          <v-col cols="12" md="9" class="pa-2 pl-8">
+          <v-col cols="12" md="9" class="pa-2 pl-5">
             <v-container class="main-content" style="max-height: 100vh;">
               <MainContent/>
             </v-container>
