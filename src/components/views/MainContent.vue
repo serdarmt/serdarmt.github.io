@@ -17,7 +17,7 @@
                     My name is Serdar and I am a software engineer based out of NYC. I currently work at Hoolii as a Full Stack Software Engineer.
                 </p>
                 <p class="mt-3">
-                    I previously attended Columbia University where I completed my bachelor's in 2023 and currently working towards my master's at UT Austin, both in computer science.
+                    I previously attended Columbia University where I completed my bachelor's in CS in 2023.
                 </p>
                 <p class="mt-3">
                         You can reach me at <a class="text-decoration-none" href="mailto:sm5038@columbia.edu" >sm5038@columbia.edu</a>
@@ -32,10 +32,6 @@
                         <div class="education-entry my-2">
                             <span>Columbia University, GS '23 – </span>
                             <span>BA in Computer Science</span>
-                        </div>
-                        <div class="education-entry my-2">
-                            <span>University of Texas at Austin, NS '26 – </span>
-                            <span>MS in Computer Science</span>
                         </div>
                     </div>
                 </section>
